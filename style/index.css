@@ -135,25 +135,6 @@ menu{
 }
 
 
-/* Tabs for different Category */
-
-.shop-tabs{
-    width:calc(95% - 42vh);
-    height: calc(90vh - 100px);
-    background-color: #0E1319;
-    margin-top: 100px;
-    left:42vh;
-    position: absolute;
-}
-
-.tabs-container{
-    margin-top: 10px;
-    padding: 0 30px;
-    width:100%;
-    height: calc(100% - 10px);
-    overflow: hidden;
-    overflow-y: auto;
-}
 
 /* customize  scroll-bar for all tabs */
 .tabs-container::-webkit-scrollbar {
@@ -172,3 +153,34 @@ menu{
   .tabs-container::-webkit-scrollbar-thumb:hover {
     background: #05a0d4; /* Background on hover */
   }
+
+
+  /* Tabs for different Category */
+.shop-tabs{
+    width:calc(95% - 42vh);
+    height: calc(90vh - 100px);
+    background-color: #0E1319;
+    margin-top: 100px;
+    left:42vh;
+    position: absolute;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+.tabs-container{
+    margin-top: 10px;
+    padding: 0 30px;
+    width:100%;
+    height: calc(100% - 10px);
+    overflow: hidden;
+    overflow-y: auto;
+}
+.active-tab{
+ scale: 1;
+ opacity: 1;
+ display: block;
+}
+
+
+
