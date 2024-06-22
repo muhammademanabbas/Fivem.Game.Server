@@ -1,0 +1,24 @@
+@media (max-width:600px) {
+    
+    menu{
+        width:100%;
+        left: 0%;
+        background-color: orange;
+    }
+    #side-bar{
+        display: none;
+        scale: 0;
+        opacity: 0;
+    }
+    .shop-tabs{
+        background-color: #0E1319;
+        width:100%;
+        height: calc(98vh - 100px);
+        left: 0;
+    }
+    #top-screen{
+        margin-top: 0%;
+        margin-left: 0%;
+    }
+
+}
