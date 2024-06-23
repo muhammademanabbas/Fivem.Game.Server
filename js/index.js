@@ -1,21 +1,147 @@
-const tabButtons = document.querySelectorAll('#top #icons li'); // Select tab buttons
-const shopTabs = document.querySelectorAll('.shop-tabs'); // Select shop tabs (these are content tabs)
+const tabButtons = document.querySelectorAll("#top #icons li"); // Select tab buttons
+const shopTabs = document.querySelectorAll(".shop-tabs"); // Select shop tabs (these are content tabs)
+const sideBarmenu = document.querySelector("#side-bar-menu");
+const sideBar = document.querySelector('#side-bar');
+const closeSideBar = document.querySelector("#close-side-bar");
+let lowestValueArrow;
+let greatestValueArrow;
 
+//  after document load this function will run
+document.addEventListener("DOMContentLoaded", function () {
+  greatestValueArrow = document.querySelectorAll(".increase-amount");
+  lowestValueArrow = document.querySelectorAll(".decrease-amount");
+
+lowestValueArrow.forEach((arrow, index) => {
+  arrow.addEventListener("click", function () {
+    // Get the next sibling element (assuming it's a single element)
+    const quantityElement = arrow.nextElementSibling;
+
+    // Check if the sibling exists and has a valid number
+    if (quantityElement && !isNaN(quantityElement.textContent)) {
+      // Convert the text content to an integer
+      let currentValue = parseInt(quantityElement.textContent);
+
+      // Decrement the value, but only if it's greater than 1
+      if (currentValue > 1) {
+        currentValue--;
+      }
+
+      // Update the text content of the quantity element
+      quantityElement.textContent = currentValue;
+    } else {
+      console.error("Invalid quantity element or format");
+    }
+  });
+});
+
+greatestValueArrow.forEach((arrow, index) => {
+  arrow.addEventListener("click", function () {
+    // Get the previous sibling element (assuming it's a single element)
+    const quantityElement = arrow.previousElementSibling;
+
+    // Check if the sibling exists and has a valid number
+    if (quantityElement && !isNaN(quantityElement.textContent)) {
+      // Convert the text content to an integer
+      let currentValue = parseInt(quantityElement.textContent);
+
+      // Increment the value
+      currentValue++;
+
+      // Update the text content of the quantity element
+      quantityElement.textContent = currentValue;
+    } else {
+      console.error("Invalid quantity element or format");
+    }
+  });
+});
+
+});
+
+// side bar selected and unselected functionality
+function sideBarToogle (){
+   // Event Listener for Toggle Button
+   sideBarmenu.addEventListener("click", function () {
+    console.log("clicked");
+    sideBar.style.display = "block";
+    sideBar.style.scale = "1";
+    sideBar.style.opacity = "1";
+    closeSideBar.style.display = "block";
+  });
+
+  // Event Listener for Close Button
+  closeSideBar.addEventListener("click", function () {
+    console.log("clicked");
+    sideBar.style.display = "none";
+    sideBar.style.scale = "0";
+    sideBar.style.opacity = "0";
+    closeSideBar.style.display = "none";
+  });
+
+}
+sideBarToogle()
+
+// resize functionality
+function resizeHandler() {
+  // Media Query Check (within sideBarToogle)
+  if (window.innerWidth > 930 ) {
+    sideBar.style.display = "block";
+    sideBar.style.opacity = 1;
+    sideBar.style.scale = 1;
+  } else {
+    sideBar.style.display = "none";
+    sideBar.style.opacity = 0;
+    sideBar.style.scale = 0;
+  }
+}
+// Call the function to initialize
+sideBarToogle();
+
+// Optional: Add event listener for resize (if needed)
+window.addEventListener("resize", resizeHandler);
+
+
+// Add event listener to each tab button to active tabs and buttons
 tabButtons.forEach((button, buttonIndex) => {
-  button.addEventListener('click', () => {
+  button.addEventListener("click", () => {
     // Remove "active-tab-btn" from all buttons
-    tabButtons.forEach(otherButton => otherButton.classList.remove('active-tab-btn'));
+    tabButtons.forEach((otherButton) =>
+      otherButton.classList.remove("active-tab-btn")
+    );
+const lowestValueArrow = document.querySelectorAll(".decrease-amount");
+
+lowestValueArrow.forEach((arrow, index) => {
+  arrow.addEventListener("click", function () {
+    // Get the next sibling element (assuming it's a single element)
+    const quantityElement = arrow.nextElementSibling;
+
+    // Check if the sibling exists and has a valid number
+    if (quantityElement && !isNaN(quantityElement.textContent)) {
+      // Convert the text content to an integer
+      let currentValue = parseInt(quantityElement.textContent);
+
+      // Decrement the value, but only if it's greater than 1
+      if (currentValue > 1) {
+        currentValue--;
+      }
+
+      // Update the text content of the quantity element
+      quantityElement.textContent = currentValue;
+    } else {
+      console.error("Invalid quantity element or format");
+    }
+  });
+});
 
     // Add "active-tab-btn" to the clicked button
-    button.classList.add('active-tab-btn');
+    button.classList.add("active-tab-btn");
 
     // Select the corresponding shop tab based on index
     const selectedTab = shopTabs[buttonIndex];
 
     // Remove "active-tab" (or your inactive class) from all shop tabs
-    shopTabs.forEach(tab => tab.classList.remove('active-tab')); // Adjust the class name if needed
+    shopTabs.forEach((tab) => tab.classList.remove("active-tab")); // Adjust the class name if needed
 
     // Add "active-tab" to the selected shop tab
-    selectedTab.classList.add('active-tab');
+    selectedTab.classList.add("active-tab");
   });
 });

@@ -23,20 +23,21 @@
 
 <body>
     <main>
-        <div id="backgound-screen">
+        <div id="backgound-screen" >
             <div id="top-screen">
                 <div id="side-bar">
                     <div id="sidebar-container">
+                        <h3 id="close-side-bar">X</h3>
                         <div id="top">
                             <div id="logo">
                                 <img src="./assets/sidebar-icons/logo.png" id="sensity-img" alt="logo" />
                             </div>
                             <div id="icons">
-                                <li class="">
+                                <li class="active-tab-btn">
                                     <img src="./assets/sidebar-icons/accueil.png" alt="accueil-img">
                                     <p>Accueil</p>
                                 </li>
-                                <li class="active-tab-btn">
+                                <li class="">
                                     <img src="./assets/sidebar-icons/véhicule.png" alt="véhicle-img">
                                     <p>Véhicle</p>
                                 </li>
@@ -70,6 +71,7 @@
                     </div>
                 </div>
                 <menu>
+                    <i class="ri-menu-2-fill" id="side-bar-menu"></i>
                     <div id="content">
                         <div id="left"></div>
                         <div id="right">
@@ -86,79 +88,59 @@
                     </div>
                 </menu>
 
-                <!-- Tabs for Different Category -->
-                <section class="shop-tabs ">
+                <!--All Tabs by Different Category -->
+                 <!-- accueil tab it is different style than others-->
+                <section class="shop-tabs active-tab">
                     <div class="tabs-container">
                         <div class="accueil-tab">
-                            Accueil Tab
+                            <!-- accueil tab will show here from java script -->
                         </div>
                     </div>
                 </section>
-                <!-- Vehicle Tab -->
-                <section class="shop-tabs active-tab">
+                <!-- vehicle Tab -->
+                <section class="shop-tabs ">
                     <div class="tabs-container">
                         <div class="vehicle-tab single-tab">
-                            <!-- cards code -->
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="card-header img-side">
-                                        <p class="card-banner" style="background-color: #8E428E;">DE RETOUR*</p>
-                                        <img src="./assets/card-images/car.jpg" alt="car-img">
-                                    </div>
-                                    <div class="card-footer card-content">
-                                        <div class="card-title">
-                                            <h6>Medreces G65 AMG</h6>
-                                            <p>Stock restant : 14</p>
-                                        </div>
-                                        <div class="card-price">
-                                            <i class="ri-arrow-left-s-line"></i>
-                                            <p>1</p>
-                                            <i class="ri-arrow-right-s-line"></i>
-                                            <button class="diamond-button">
-                                                <i class="ri-vip-diamond-fill"></i>
-                                                <p>2500</p>
-                                            </button>
-                                            <button class="previsualiser"><p>previsualiser</p></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- cards will display there -->
+                        </div>
+                    </div>
+                </section>
+                <!-- armes tab -->
+                <section class="shop-tabs">
+                    <div class="tabs-container">
+                        <div class="armes-tab single-tab">
                             
                         </div>
                     </div>
                 </section>
-
+                <!-- caisses tab -->
                 <section class="shop-tabs">
                     <div class="tabs-container">
-                        <div class="armes-tab">
-                            Armes Tab
-                        </div>
-                    </div>
-                </section>
-                <section class="shop-tabs">
-                    <div class="tabs-container">
-                        <div class="caisses-tab">
+                        <div class="caisses-tab single-tab">
                             Caisses Tab
                         </div>
                     </div>
                 </section>
+                <!-- packs tab -->
                 <section class="shop-tabs">
                     <div class="tabs-container">
-                        <div class="packs-tab">
+                        <div class="packs-tab single-tab">
                             Packs Tab
                         </div>
                     </div>
                 </section>
+                <!-- consommables taba -->
                 <section class="shop-tabs">
                     <div class="tabs-container">
-                        <div class="consommables-tab">
-                            Consommables Tab
+                        <div class="consommables-tab single-tab">
+                            
                         </div>
                     </div>
                 </section>
+                <!-- abonnement tabs -->
                 <section class="shop-tabs">
                     <div class="tabs-container">
-                        <div class="abonnement-tab">
+                        <div class="abonnement-tab single-tab">
                             Abonnement Tab
                         </div>
                     </div>
@@ -168,8 +150,11 @@
         </div>
     </main>
 
-
     <script src="./js/index.js"></script>
+    <script src="./js/accueilFunction.js"></script>
+    <script src="./js/vehicleFunction.js"></script>
+    <script src="./js/armesFunction.js"></script>
+    <script src="./js/caissesFunction.js"></script>
+    <script src="./js/consommableFunction.js"></script>
 </body>
-
 </html>

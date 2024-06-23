@@ -36,6 +36,19 @@ html {
 #side-bar{
     width: 42vh;
     height: 90vh;
+    transition: all 0.5s ease;
+    display: block;
+    scale: 1;
+    opacity: 1;
+    z-index: 6;
+}
+
+#close-side-bar{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    cursor: pointer;
+    display: none;
 }
 
 /* giving 20px padding to top bottom and 5vh for left right  */
@@ -138,6 +151,19 @@ menu{
    -webkit-scrollbar: none;
     scrollbar-width: none;
 }
+
+#side-bar-menu{
+    position: absolute;
+    display: none;
+    top: 10%;
+    left: 2%;
+    cursor: pointer;
+    transition: all 0.3s linear ;
+   }
+
+#side-bar-menu:active{
+    scale: 1.30;    
+   }
 
 #content{
     gap: 2vh;
@@ -250,9 +276,32 @@ menu{
     width: 43vh;
     height: 33vh;
     background-color: #191E24;
+    overflow: hidden;
+    overflow-y: auto;
+    overflow-x:auto;
 }
 
+
+
+.card-container::-webkit-scrollbar {
+    width: 4px; /* Adjust width as needed */
+    background: #888; /* Background color of the track */
+    border-radius: 5px; /* Add rounded corners */
+  }
+  
+  /* Target the scrollbar thumb */
+  .card-container::-webkit-scrollbar-thumb {
+    background: #05B5F0; /* Color of the thumb */
+    border-radius: 4px; /* Add rounded corners */
+  }
+
+  /* Target the thumb hover state (optional) */
+  .card-container::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Background on hover */
+  }
+
 .card-header{
+    height: 24vh;
     position: relative;
 }
 
@@ -260,6 +309,7 @@ menu{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background-position: center;
 }
 
 .card-header .card-banner{
@@ -336,3 +386,111 @@ menu{
     font-family: "Orbitron", sans-serif;;
 }
 
+/* Accueil (Home Tab) */
+
+.accueil-tab{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    overflow: hidden;
+    overflow-y: auto;
+    gap: 2vh;
+    
+}
+
+.accueil-tab::-webkit-scrollbar {
+    width: 4px; /* Adjust width as needed */
+    background: #888; /* Background color of the track */
+    border-radius: 5px; /* Add rounded corners */
+  }
+  
+  /* Target the scrollbar thumb */
+  .accueil-tab::-webkit-scrollbar-thumb {
+    background: #05B5F0; /* Color of the thumb */
+    border-radius: 4px; /* Add rounded corners */
+  }
+
+  /* Target the thumb hover state (optional) */
+  .accueil-tab::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Background on hover */
+  }
+
+.accueil-card-container{
+    display: flex;
+    width: 98%;
+    height: 100%;
+}
+
+.left-accueil{
+    width: 14vh;
+    background-color: #434A5A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotate-heading{
+    font-weight: 800;
+    transform: rotate(-90deg);
+    font-style: italic;
+    user-select: none;
+    text-transform: uppercase;
+}
+
+.img-content{
+    width: 100%;
+    display: flex;
+}
+
+.center-accueil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 80vh;
+}
+
+.center-accueil img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+
+.right-accueil{
+    width:47vh;
+    background-color: #191E24;
+    padding: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-card-top{
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+}
+
+.right-accueil p{
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
+    font-size: 13.7px;
+}
+
+.right-accueil-button{
+    width: 90%;
+    height: 5vh;
+    border: none;
+    background-color: #3C4145;
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
+}
+
+.right-accueil-button:hover{
+    cursor: pointer;
+}
+.right-accueil-button:active{
+    scale: 1.05;
+}

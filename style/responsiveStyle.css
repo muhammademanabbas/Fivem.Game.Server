@@ -1,5 +1,37 @@
+/* -------------- when screen comes to 1160px this css will apply ---------------- */
+@media (max-width:1160px) {
+
+    .accueil-card-container{
+        width: 100%;
+        height:100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-accueil{
+        height: 14%;
+        width:100%;
+    }
+    .rotate-heading{
+        transform: rotate(0deg);
+    }
+
+    .img-content{
+        flex-direction: column;
+    }
+
+    .center-accueil{
+        width: 100%;
+        height: 43vh;
+    }
+
+    .right-accueil{
+        width: 100%;
+        gap: 2vh;
+    }
+
+}
 /* -------------- when screen comes to 1150px this css will apply ---------------- */
-@media (max-width:1150px) {
+@media (max-width:1050px) {
 
     .single-tab{
         justify-content: center;
@@ -22,10 +54,14 @@
         width: 80px;
         font-size: 8px;
     }
+    #content #left{
+        width: 50px;
+        height: 50px;
+    }
 }
 
-/* -------------- when screen comes to 700px this css will apply ---------------- */
-@media (max-width:700px) {
+/* -------------- when screen comes to 930px this css will apply ---------------- */
+@media (max-width:930px) {
     
     menu{
         width:100%;
@@ -37,6 +73,11 @@
         scale: 0;
         opacity: 0;
     }
+
+    #side-bar-menu{
+        display: block;
+    }
+
     .shop-tabs{
         background-color: #0E1319;
         width:100%;
@@ -46,6 +87,41 @@
     #top-screen{
         margin-top: 2%;
         margin-left: 0%;
+    }
+    .single-tab{
+        justify-content: start;
+    }
+
+    
+    
+}
+
+/* -------------- when screen comes to 800px this css will apply ---------------- */
+@media (max-width:800px) {
+
+    .card-container{
+        width: 60vh;
+        height: 33vh;
+    }
+
+    .single-tab{
+        justify-content: center;
+    }
+
+}
+
+@media (max-width:600px) {
+
+    .center-accueil{
+        height: 24vh;
+    }
+
+}
+
+@media (max-width:370px) {
+
+    .rotate-heading{
+        font-size:6vw;
     }
 
 }
