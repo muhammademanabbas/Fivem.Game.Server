@@ -41,7 +41,7 @@ let armes___CARDS = armes__cards__array.map((obj, index) => `
 `);
 
 function addCards() {
-    armes__tabs.innerHTML = armes___CARDS.join('');  // More efficient way to add all card HTML
+    armes__tabs.innerHTML = armes___CARDS.join('');  
 }
 
 addCards();

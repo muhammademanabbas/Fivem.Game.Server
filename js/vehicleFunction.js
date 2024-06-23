@@ -56,7 +56,7 @@ let vehicle__CARDS = vehicle__cards__array.map((obj, index) => `
 `);
 
 function addCards() {
-  vehicle__tab.innerHTML = vehicle__CARDS.join('');  // More efficient way to add all card HTML
+  vehicle__tab.innerHTML = vehicle__CARDS.join('');
 }
 
 addCards();

@@ -35,7 +35,7 @@ let acueil___CARDS = accueil__cards__array.map((obj, index) => `
 `);
 
 function addCards() {
-    accueil__tabs.innerHTML = acueil___CARDS.join('');  // More efficient way to add all card HTML
+    accueil__tabs.innerHTML = acueil___CARDS.join('');  
 }
 
 addCards();

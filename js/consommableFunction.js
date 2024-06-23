@@ -41,7 +41,7 @@ let consommables___CARDS = consommables__cards__array.map((obj, index) => `
 `);
 
 function addCards() {
-    consommables__tabs.innerHTML = consommables___CARDS.join('');  // More efficient way to add all card HTML
+    consommables__tabs.innerHTML = consommables___CARDS.join(''); 
 }
 
 addCards();

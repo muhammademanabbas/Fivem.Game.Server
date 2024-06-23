@@ -40,7 +40,7 @@ let caisses__CARDS = caisses__cards__array.map((obj, index) => `
 `);
 
 function addCards() {
-    caisses__tab.innerHTML = caisses__CARDS.join('');  // More efficient way to add all card HTML
+    caisses__tab.innerHTML = caisses__CARDS.join('');  
 }
 
 addCards();
