@@ -1,9 +1,36 @@
-@media (max-width:600px) {
+/* -------------- when screen comes to 1150px this css will apply ---------------- */
+@media (max-width:1150px) {
+
+    .single-tab{
+        justify-content: center;
+       }
+
+}
+
+/* -------------- when screen comes to 900px this css will apply ---------------- */
+@media (max-width:990px) {
+    menu{
+        flex-direction: column;
+        overflow-x: auto;
+        padding: 7px 0px;
+    }
+    #left{
+        width: 10vh;
+        height: 10vh;
+    }
+    .buttons button{
+        width: 80px;
+        font-size: 8px;
+    }
+}
+
+/* -------------- when screen comes to 700px this css will apply ---------------- */
+@media (max-width:700px) {
     
     menu{
         width:100%;
         left: 0%;
-        background-color: orange;
+        border-left: 0px;
     }
     #side-bar{
         display: none;
@@ -17,7 +44,7 @@
         left: 0;
     }
     #top-screen{
-        margin-top: 0%;
+        margin-top: 2%;
         margin-left: 0%;
     }
 

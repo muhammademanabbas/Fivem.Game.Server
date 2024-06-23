@@ -11,23 +11,24 @@ body,
 html {
     width: 100%;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 #backgound-screen{
-    background-color: #3F2B06;
     width: 100%;
     min-height: 100vh;
+    background-color: #3F2B06;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 #top-screen{
     width: 95%;
-    height: 98vh;
+    /* height: 98vh; */
+    height: 90vh;
     display: flex;
-    margin-top: 3%;
-    margin-left: 2.5%;
+    margin-top: 2.5%;
+    margin-left: 4%;
     position: relative;
 }
 
@@ -48,7 +49,7 @@ html {
     position: relative;
 }
 
-/* top of sidebar  */
+/* -------------------------Top of Side Bar  ------------------------- */
 #top{
     display: flex;
     flex-direction: column;
@@ -96,10 +97,6 @@ html {
     filter: brightness(0) saturate(100%) invert(49%) sepia(10%) saturate(224%) hue-rotate(178deg) brightness(89%) contrast(81%);
 }
 
-/* #top #icons img:hover{
-    filter: brightness(0) saturate(100%) invert(90%) sepia(66%) saturate(1790%) hue-rotate(310deg) brightness(100%) contrast(97%);
-} */
-
 #top #icons p{
     margin-top: 3px;
     color: #717479;
@@ -124,19 +121,75 @@ html {
     font-family: Arial, sans-serif;
 }
 
-/* top menu  */
+/* ------------------------- Top Menu  ------------------------- */
 
 menu{
     width: calc(95% - 42vh);
     height: 100px;
     left: 42vh;
-    background-color: orange;
+    background-color: #12171B;
     position: absolute;
+    border-left: 30px solid #0E1319;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+    overflow: scroll;
+   -webkit-scrollbar: none;
+    scrollbar-width: none;
+}
+
+#content{
+    gap: 2vh;
+    display: flex;
+    align-items: center;
+    
+}
+
+#left{
+    width: 70px;
+    height: 70px;
+    background-color: white; 
+}
+
+#right .blue-line{
+    width: 20px;
+    height: 3px;
+    background-color: #087AF1;
+}
+#right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+#right p{
+    font-family: sans-serif;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.buttons button{
+    background-color: #3C4145;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-family: sans-serif;
+    width: 100px;
+}
+
+.buttons button:active{
+    scale: 1.05;
 }
 
 
 
-/* customize  scroll-bar for all tabs */
+/* customize scroll-bar for all tabs */
 .tabs-container::-webkit-scrollbar {
     width: 4px; /* Adjust width as needed */
     background: #888888; /* Background color of the track */
@@ -155,7 +208,7 @@ menu{
   }
 
 
-  /* Tabs for different Category */
+/* -------------------------Tabs for different Category  ------------------------- */
 .shop-tabs{
     width:calc(95% - 42vh);
     height: calc(90vh - 100px);
@@ -175,6 +228,7 @@ menu{
     height: calc(100% - 10px);
     overflow: hidden;
     overflow-y: auto;
+
 }
 .active-tab{
  scale: 1;
@@ -182,5 +236,103 @@ menu{
  display: block;
 }
 
+.single-tab{
+ display: flex;
+ gap: 20px;
+ justify-content: start;
+ flex-wrap: wrap;
+ margin-top:  24px;
+}
 
+/* ---------------- Cards CSS -------------------- */
+
+.card-container{
+    width: 43vh;
+    height: 33vh;
+    background-color: #191E24;
+}
+
+.card-header{
+    position: relative;
+}
+
+.card-header img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-header .card-banner{
+    position: absolute;
+    font-family: sans-serif;
+    left: 5%;
+    top: 5%;
+    font-weight: 600;
+    padding: 4px;
+    font-size: 12px;
+}
+
+.card-title{
+    height: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 1vh;
+    
+}
+
+.card-title p{
+    font-size: 10px;
+    font-weight: 600;
+    font-family: sans-serif, Arial, Helvetica ;
+}
+
+.card-price{
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+}
+
+.ri-arrow-left-s-line, .ri-arrow-right-s-line{
+    cursor: pointer;
+}
+
+.card-price p{
+    font-size: 10px;
+    font-weight: 700;
+    font-family: sans-serif, Arial, Helvetica ;
+}
+
+.card-price button{
+    background-color: #3C4145;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-family: sans-serif;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.card-price .previsualiser:active{
+        scale: 1.05;
+}
+
+.card-price .diamond-button .ri-vip-diamond-line{
+      color:white;
+}
+
+.card-price .diamond-button{
+    cursor: auto;
+    gap: 4px;
+}
+
+.card-price .diamond-button p{
+    font-family: "Orbitron", sans-serif;;
+}
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
 
     <!-- Remix icon cdn-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-    
+
     <title>Fivem</title>
 </head>
 
@@ -69,59 +69,101 @@
                         </div>
                     </div>
                 </div>
-                <menu></menu>
+                <menu>
+                    <div id="content">
+                        <div id="left"></div>
+                        <div id="right">
+                            <p>tunnel me bro</p>
+                            <div class="blue-line"></div>
+                            <p>Identifiant - 68041</p>
+                            <div class="blue-line"></div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button>Boutique</button>
+                        <button>Historique</button>
+                        <button>Iventaire (0)</button>
+                    </div>
+                </menu>
 
                 <!-- Tabs for Different Category -->
-                <section class="shop-tabs " >
+                <section class="shop-tabs ">
                     <div class="tabs-container">
                         <div class="accueil-tab">
                             Accueil Tab
                         </div>
                     </div>
                 </section>
-                <section class="shop-tabs active-tab" >
+                <!-- Vehicle Tab -->
+                <section class="shop-tabs active-tab">
                     <div class="tabs-container">
-                        <div class="vehicle-tab">
-                            Vehicle Tab
+                        <div class="vehicle-tab single-tab">
+                            <!-- cards code -->
+                            <div class="card-container">
+                                <div class="card">
+                                    <div class="card-header img-side">
+                                        <p class="card-banner" style="background-color: #8E428E;">DE RETOUR*</p>
+                                        <img src="./assets/card-images/car.jpg" alt="car-img">
+                                    </div>
+                                    <div class="card-footer card-content">
+                                        <div class="card-title">
+                                            <h6>Medreces G65 AMG</h6>
+                                            <p>Stock restant : 14</p>
+                                        </div>
+                                        <div class="card-price">
+                                            <i class="ri-arrow-left-s-line"></i>
+                                            <p>1</p>
+                                            <i class="ri-arrow-right-s-line"></i>
+                                            <button class="diamond-button">
+                                                <i class="ri-vip-diamond-fill"></i>
+                                                <p>2500</p>
+                                            </button>
+                                            <button class="previsualiser"><p>previsualiser</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </section>
-                <section class="shop-tabs" >
+
+                <section class="shop-tabs">
                     <div class="tabs-container">
                         <div class="armes-tab">
                             Armes Tab
                         </div>
                     </div>
                 </section>
-                <section class="shop-tabs" >
+                <section class="shop-tabs">
                     <div class="tabs-container">
                         <div class="caisses-tab">
                             Caisses Tab
                         </div>
                     </div>
                 </section>
-                <section class="shop-tabs" >
+                <section class="shop-tabs">
                     <div class="tabs-container">
                         <div class="packs-tab">
                             Packs Tab
                         </div>
                     </div>
                 </section>
-                <section class="shop-tabs" >
+                <section class="shop-tabs">
                     <div class="tabs-container">
                         <div class="consommables-tab">
                             Consommables Tab
                         </div>
                     </div>
                 </section>
-                <section class="shop-tabs" >
+                <section class="shop-tabs">
                     <div class="tabs-container">
                         <div class="abonnement-tab">
                             Abonnement Tab
                         </div>
                     </div>
                 </section>
-                
+
             </div>
         </div>
     </main>
