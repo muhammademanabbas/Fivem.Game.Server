@@ -29,7 +29,7 @@ let acueil___CARDS = accueil__cards__array.map((obj, index) => `
                                             <p>${obj.card__description}</p>
                                         </div>
                                         <button class="right-accueil-button">PREVISUALISER</button>
-                                    </div>
+                                    </div>m
                                 </div>
                             </div>
 `);
@@ -38,4 +38,4 @@ function addCards() {
     accueil__tabs.innerHTML = acueil___CARDS.join('');  
 }
 
-addCards();
+addCards();    
