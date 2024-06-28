@@ -36,11 +36,11 @@ html {
 #side-bar{
     width: 42vh;
     height: 90vh;
-    transition: all 0.5s ease;
+    /* transition: all 0.2s ease; */
     display: block;
     scale: 1;
     opacity: 1;
-    z-index: 6;
+    /* z-index: 0; */
 }
 
 #close-side-bar{
@@ -145,17 +145,18 @@ menu{
     border-left: 30px solid #0E1319;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 4vh;
     padding: 0px 15px;
     overflow: scroll;
    -webkit-scrollbar: none;
     scrollbar-width: none;
+    scale: 1;
 }
 
 #side-bar-menu{
     position: absolute;
     display: none;
-    top: 10%;
+    top: 38%;
     left: 2%;
     cursor: pointer;
     transition: all 0.3s linear ;
@@ -163,6 +164,10 @@ menu{
 
 #side-bar-menu:active{
     scale: 1.30;    
+   }
+
+   #top #icons p{
+    font-family: "Orbitron", sans-serif;
    }
 
 #content{
@@ -190,8 +195,11 @@ menu{
     gap: 4px;
 }
 
-#right p{
+p, button p{
     font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-stretch: expanded;
 }
 
 .buttons{
@@ -206,32 +214,34 @@ menu{
     padding: 6px 10px;
     cursor: pointer;
     font-family: sans-serif;
-    width: 100px;
+    height: 30px;
+    width: 120px;
+    transition: all 0.05s linear;
+    font-family: sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
 }
 
 .buttons button:active{
-    scale: 1.05;
+    scale: 1.02;
+    background-color: #0E1319;
 }
 
-
-
-/* customize scroll-bar for all tabs */
 .tabs-container::-webkit-scrollbar {
-    width: 4px; /* Adjust width as needed */
-    background: #888888; /* Background color of the track */
-    border-radius: 5px; /* Add rounded corners */
+    width: 4px;
+    background: transparent; 
+    border-radius: 5px; 
   }
   
-  /* Target the scrollbar thumb */
   .tabs-container::-webkit-scrollbar-thumb {
-    background: #05B5F0; /* Color of the thumb */
-    border-radius: 4px; /* Add rounded corners */
-  }
+    background: transparent;
+    border-radius: 4px;
+   }
 
-  /* Target the thumb hover state (optional) */
-  .tabs-container::-webkit-scrollbar-thumb:hover {
-    background: #05a0d4; /* Background on hover */
-  }
+   .tabs-container::-webkit-scrollbar-thumb:hover {
+     background: #05a0d4; 
+     cursor: pointer;
+   } 
 
 
 /* -------------------------Tabs for different Category  ------------------------- */
@@ -248,13 +258,12 @@ menu{
 }
 
 .tabs-container{
-    margin-top: 10px;
+    margin-top: 0px;
     padding: 0 30px;
     width:100%;
-    height: calc(100% - 10px);
+    height: calc(100% - 0px);
     overflow: hidden;
     overflow-y: auto;
-
 }
 .active-tab{
  scale: 1;
@@ -270,10 +279,12 @@ menu{
  margin-top:  24px;
 }
 
+
+
 /* ---------------- Cards CSS -------------------- */
 
 .card-container{
-    width: 43vh;
+    width: 44vh;
     height: 33vh;
     background-color: #191E24;
     overflow: hidden;
@@ -310,6 +321,7 @@ menu{
     height: 100%;
     object-fit: cover;
     background-position: center;
+    cursor: pointer;
 }
 
 .card-header .card-banner{
@@ -383,7 +395,7 @@ menu{
 }
 
 .card-price .diamond-button p{
-    font-family: "Orbitron", sans-serif;;
+    font-family: "Orbitron", sans-serif;
 }
 
 /* Accueil (Home Tab) */
