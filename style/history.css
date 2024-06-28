@@ -1,0 +1,51 @@
+.history-container{
+    width: 100%;
+    min-height: 100vh;
+   
+}
+
+.history-container li{
+    width: 100%;
+    height: 32px;
+    background-color: #181E23;
+    margin-bottom: 10px;
+}
+
+.history-detail{
+    display: flex;
+    align-items: center;
+    padding: 0px 4vh;
+    justify-content: space-between;
+    overflow: hidden;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+      }
+    
+      /* Optional: Style the scrollbar track (adjust as needed) */
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Light gray background */
+      }
+    
+      /* Optional: Style the scrollbar thumb (adjust as needed) */
+      &::-webkit-scrollbar-thumb {
+        background: #ddd; /* Darker gray thumb */
+        border-radius: 5px; /* Rounded corners */
+      }
+}
+
+.history-content{
+    display: flex;
+    gap: 14vh;
+}
+
+.transaction,.diamants,.date{
+    font-family:  sans-serif , 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    font-weight: 600;
+    color: white;
+    font-size: 2vh;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}

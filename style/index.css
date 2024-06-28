@@ -1,0 +1,508 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color:white;
+}
+
+body,
+html {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#backgound-screen{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #3F2B06;
+    display: flex;
+    justify-content: center;
+}
+
+#top-screen{
+    width: 95%;
+    /* height: 98vh; */
+    height: 90vh;
+    display: flex;
+    margin-top: 2.5%;
+    margin-left: 4%;
+    position: relative;
+}
+
+/* ------------------------- SIDE BAR ---------------------------- */
+#side-bar{
+    width: 42vh;
+    height: 90vh;
+    /* transition: all 0.2s ease; */
+    display: block;
+    scale: 1;
+    opacity: 1;
+    /* z-index: 0; */
+}
+
+#close-side-bar{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    cursor: pointer;
+    display: none;
+}
+
+/* giving 20px padding to top bottom and 5vh for left right  */
+#sidebar-container{
+    padding: 20px 3vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    background-color: #12171B;
+    position: relative;
+}
+
+/* -------------------------Top of Side Bar  ------------------------- */
+#top{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+#top #logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#top #sensity-img{
+    width: 30vh;
+    text-align: center;
+}
+
+#top #icons {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+#top #icons li{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 4px;
+    transition: all 0.04s linear;
+}
+
+#top #icons li:hover{
+   scale: 1.06;
+   border-bottom: 3px solid #FBBD60 ;
+}
+
+.active-tab-btn{
+    filter: brightness(0) saturate(100%) invert(90%) sepia(66%) saturate(1790%) hue-rotate(310deg) brightness(100%) contrast(97%);
+}
+
+#top #icons img{
+    width: 3vh;
+    filter: brightness(0) saturate(100%) invert(49%) sepia(10%) saturate(224%) hue-rotate(178deg) brightness(89%) contrast(81%);
+}
+
+#top #icons p{
+    margin-top: 3px;
+    color: #717479;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+#bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    font-weight: 600;
+}
+
+#bottom .ri-vip-diamond-fill{
+    color: #FBBD60;
+}
+
+#bottom p{
+    font-family: Arial, sans-serif;
+}
+
+/* ------------------------- Top Menu  ------------------------- */
+
+menu{
+    width: calc(95% - 42vh);
+    height: 100px;
+    left: 42vh;
+    background-color: #12171B;
+    position: absolute;
+    border-left: 30px solid #0E1319;
+    display: flex;
+    align-items: center;
+    gap: 4vh;
+    padding: 0px 15px;
+    overflow: scroll;
+   -webkit-scrollbar: none;
+    scrollbar-width: none;
+    scale: 1;
+}
+
+#side-bar-menu{
+    position: absolute;
+    display: none;
+    top: 38%;
+    left: 2%;
+    cursor: pointer;
+    transition: all 0.3s linear ;
+   }
+
+#side-bar-menu:active{
+    scale: 1.30;    
+   }
+
+   #top #icons p{
+    font-family: "Orbitron", sans-serif;
+   }
+
+#content{
+    gap: 2vh;
+    display: flex;
+    align-items: center;
+    
+}
+
+#left{
+    width: 70px;
+    height: 70px;
+    background-color: white; 
+}
+
+#right .blue-line{
+    width: 20px;
+    height: 3px;
+    background-color: #087AF1;
+}
+#right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+p, button p{
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-stretch: expanded;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.buttons button{
+    background-color: #3C4145;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-family: sans-serif;
+    height: 30px;
+    width: 120px;
+    transition: all 0.05s linear;
+    font-family: sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.buttons button:active{
+    scale: 1.02;
+    background-color: #0E1319;
+}
+
+.tabs-container::-webkit-scrollbar {
+    width: 4px;
+    background: transparent; 
+    border-radius: 5px; 
+  }
+  
+  .tabs-container::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 4px;
+   }
+
+   .tabs-container::-webkit-scrollbar-thumb:hover {
+     background: #05a0d4; 
+     cursor: pointer;
+   } 
+
+
+/* -------------------------Tabs for different Category  ------------------------- */
+.shop-tabs{
+    width:calc(95% - 42vh);
+    height: calc(90vh - 100px);
+    background-color: #0E1319;
+    margin-top: 100px;
+    left:42vh;
+    position: absolute;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+.tabs-container{
+    margin-top: 0px;
+    padding: 0 30px;
+    width:100%;
+    height: calc(100% - 0px);
+    overflow: hidden;
+    overflow-y: auto;
+}
+.active-tab{
+ scale: 1;
+ opacity: 1;
+ display: block;
+}
+
+.single-tab{
+ display: flex;
+ gap: 20px;
+ justify-content: start;
+ flex-wrap: wrap;
+ margin-top:  24px;
+}
+
+
+
+/* ---------------- Cards CSS -------------------- */
+
+.card-container{
+    width: 44vh;
+    height: 33vh;
+    background-color: #191E24;
+    overflow: hidden;
+    overflow-y: auto;
+    overflow-x:auto;
+}
+
+
+
+.card-container::-webkit-scrollbar {
+    width: 4px; /* Adjust width as needed */
+    background: #888; /* Background color of the track */
+    border-radius: 5px; /* Add rounded corners */
+  }
+  
+  /* Target the scrollbar thumb */
+  .card-container::-webkit-scrollbar-thumb {
+    background: #05B5F0; /* Color of the thumb */
+    border-radius: 4px; /* Add rounded corners */
+  }
+
+  /* Target the thumb hover state (optional) */
+  .card-container::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Background on hover */
+  }
+
+.card-header{
+    height: 24vh;
+    position: relative;
+}
+
+.card-header img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.card-header .card-banner{
+    position: absolute;
+    font-family: sans-serif;
+    left: 5%;
+    top: 5%;
+    font-weight: 600;
+    padding: 4px;
+    font-size: 12px;
+}
+
+.card-title{
+    height: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 1vh;
+    
+}
+
+.card-title p{
+    font-size: 10px;
+    font-weight: 600;
+    font-family: sans-serif, Arial, Helvetica ;
+}
+
+.card-price{
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+}
+
+.ri-arrow-left-s-line, .ri-arrow-right-s-line{
+    cursor: pointer;
+}
+
+.card-price p{
+    font-size: 10px;
+    font-weight: 700;
+    font-family: sans-serif, Arial, Helvetica ;
+}
+
+.card-price button{
+    background-color: #3C4145;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-family: sans-serif;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.card-price .previsualiser:active{
+        scale: 1.05;
+}
+
+.card-price .diamond-button .ri-vip-diamond-line{
+      color:white;
+}
+
+.card-price .diamond-button{
+    cursor: auto;
+    gap: 4px;
+}
+
+.card-price .diamond-button p{
+    font-family: "Orbitron", sans-serif;
+}
+
+/* Accueil (Home Tab) */
+
+.accueil-tab{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    overflow: hidden;
+    overflow-y: auto;
+    gap: 2vh;
+    
+}
+
+.accueil-tab::-webkit-scrollbar {
+    width: 4px; /* Adjust width as needed */
+    background: #888; /* Background color of the track */
+    border-radius: 5px; /* Add rounded corners */
+  }
+  
+  /* Target the scrollbar thumb */
+  .accueil-tab::-webkit-scrollbar-thumb {
+    background: #05B5F0; /* Color of the thumb */
+    border-radius: 4px; /* Add rounded corners */
+  }
+
+  /* Target the thumb hover state (optional) */
+  .accueil-tab::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Background on hover */
+  }
+
+.accueil-card-container{
+    display: flex;
+    width: 98%;
+    height: 100%;
+}
+
+.left-accueil{
+    width: 14vh;
+    background-color: #434A5A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotate-heading{
+    font-weight: 800;
+    transform: rotate(-90deg);
+    font-style: italic;
+    user-select: none;
+    text-transform: uppercase;
+}
+
+.img-content{
+    width: 100%;
+    display: flex;
+}
+
+.center-accueil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 80vh;
+}
+
+.center-accueil img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+
+.right-accueil{
+    width:47vh;
+    background-color: #191E24;
+    padding: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-card-top{
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+}
+
+.right-accueil p{
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
+    font-size: 13.7px;
+}
+
+.right-accueil-button{
+    width: 90%;
+    height: 5vh;
+    border: none;
+    background-color: #3C4145;
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
+}
+
+.right-accueil-button:hover{
+    cursor: pointer;
+}
+.right-accueil-button:active{
+    scale: 1.05;
+}

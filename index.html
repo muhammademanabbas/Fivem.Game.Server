@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+    <!-- Our Css files -->
+    <link rel="stylesheet" href="style/font.css">
+    <link rel="stylesheet" href="./style/preview.css">
+    <link rel="stylesheet" href="./style/history.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/responsiveStyle.css">
+    
+    <!-- Remix icon cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <title>Fivem</title>
+</head>
+
+<body>
+    <main>
+        <div id="backgound-screen">
+            <div id="top-screen">
+                <div id="side-bar">
+                    <div id="sidebar-container">
+                        <h3 id="close-side-bar">X</h3>
+                        <div id="top">
+                            <div id="logo">
+                                <img src="./assets/sidebar-icons/logo.png" id="sensity-img" alt="logo" />
+                            </div>
+                            <div id="icons">
+                                <li class="">
+                                    <img src="./assets/sidebar-icons/accueil.png" alt="accueil-img">
+                                    <p>Accueil</p>
+                                </li>
+                                <li class="active-tab-btn">
+                                    <img src="./assets/sidebar-icons/véhicule.png" alt="véhicle-img">
+                                    <p>Véhicle</p>
+                                </li>
+                                <li class="">
+                                    <img src="./assets/sidebar-icons/armes.png" alt="armes-img">
+                                    <p>Armes</p>
+                                </li>
+
+                                <li class="">
+                                    <img src="./assets/sidebar-icons/caisses.png" alt="Caisses-img">
+                                    <p>Caisses</p>
+                                </li>
+                                <li class="">
+                                    <img src="./assets/sidebar-icons/pack.png" alt="Packs-img">
+                                    <p>Packs</p>
+                                </li>
+                                <li class="">
+                                    <img src="./assets/sidebar-icons/consommables.png" alt="Consommables-img">
+                                    <p>Consommables</p>
+                                </li>
+                                <li class="">
+                                    <img src="./assets/sidebar-icons/abonnement.png" alt="Abonnement-img">
+                                    <p>Abonnement</p>
+                                </li>
+                            </div>
+                        </div>
+                        <div id="bottom">
+                            <i class="ri-vip-diamond-fill"></i>
+                            <p>0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <menu id="menu">
+                    <i class="ri-menu-2-fill" id="side-bar-menu"></i>
+                    <div id="content">
+                        <div id="left"></div>
+                        <div id="right">
+                            <p>tunnel me bro</p>
+                            <div class="blue-line"></div>
+                            <p>Identifiant - 68041</p>
+                            <div class="blue-line"></div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button>Boutique</button>
+                        <button id="history-btn">Historique</button>
+                        <button>Iventaire (0)</button>
+                    </div>
+                </menu>
+
+                <!--All Tabs by Different Category -->
+
+                <!-- accueil Tab it is different style than others-->
+                <section class="shop-tabs">
+                    <div class="tabs-container">
+                        <div class="accueil-tab">
+                            <!-- accueil tab will show here from java script -->
+                        </div>
+                    </div>
+                </section>
+                <!-- vehicle Tab -->
+                <section class="shop-tabs active-tab">
+                    <div class="tabs-container">
+                        <div class="vehicle-tab single-tab">
+                           
+                        </div>
+                    </div>
+                </section>
+                <!-- armes Tab -->
+                <section class="shop-tabs">
+                    <div class="tabs-container">
+                        <div class="armes-tab single-tab">
+
+                        </div>
+                    </div>
+                </section>
+                <!-- caisses Tab -->
+                <section class="shop-tabs">
+                    <div class="tabs-container">
+                        <div class="caisses-tab single-tab">
+                            Caisses Tab
+                        </div>
+                    </div>
+                </section>
+                <!-- packs Tab -->
+                <section class="shop-tabs">
+                    <div class="tabs-container">
+                        <div class="packs-tab single-tab">
+                            Packs Tab
+                        </div>
+                    </div>
+                </section>
+                <!-- consommables Tab -->
+                <section class="shop-tabs">
+                    <div class="tabs-container">
+                        <div class="consommables-tab single-tab">
+
+                        </div>
+                    </div>
+                </section>
+                <!-- abonnement Tab -->
+                <section class="shop-tabs">
+                    <div class="tabs-container">
+                        <div class="abonnement-tab single-tab">
+                            Abonnement Tab
+                        </div>
+                    </div>
+                </section>
+                <!-- History Tab -->
+                <section class="shop-tabs" id="history-tab">
+                    <div class="tabs-container">
+                        <div class="history-tab single-tab">
+                            <div class="history-container">
+                                <li class="history-detail">
+                                    <div class="transaction">Transaction</div>
+                                    <div class="history-content">
+                                        <div class="diamants">Diamants</div>
+                                        <div class="date">Date</div>
+                                    </div>
+                                </li>   
+                                 
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/accueilFunction.js"></script>
+    <script src="./js/vehicleFunction.js"></script>
+    <script src="./js/armesFunction.js"></script>
+    <script src="./js/caissesFunction.js"></script>
+    <script src="./js/consommableFunction.js"></script>
+</body>
+
+</html>

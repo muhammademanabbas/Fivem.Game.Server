@@ -1,0 +1,232 @@
+/* -------------- when screen comes to 1160px this css will apply ---------------- */
+@media (max-width:1160px) {
+
+    .accueil-card-container {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-accueil {
+        height: 14%;
+        width: 100%;
+    }
+
+    .rotate-heading {
+        transform: rotate(0deg);
+    }
+
+    .img-content {
+        flex-direction: column;
+    }
+
+    .center-accueil {
+        width: 100%;
+        height: 43vh;
+    }
+
+    .right-accueil {
+        width: 100%;
+        gap: 2vh;
+    }
+
+    .preview-card {
+        flex-direction: column;
+    }
+
+    .preview-img-side {
+        width: 100%;
+        height: 50%;
+    }
+
+    .preview-content-side {
+        width: 100%;
+        height: 50%;
+    }
+
+    .preview-img-side .close-preview-1 {
+        display: block;
+    }
+
+    .close-preview-2 {
+        display: none;
+    }
+}
+
+/* -------------- when screen comes to 1050px this css will apply ---------------- */
+@media (max-width:1050px) {
+
+    .single-tab {
+        justify-content: center;
+    }
+
+}
+
+/* -------------- when screen comes to 990px this css will apply ---------------- */
+@media (max-width:990px) {
+    menu {
+        flex-direction: column;
+        overflow-x: auto;
+        padding: 7px 0px;
+        justify-content: space-around;
+        gap: 0px;
+    }
+
+    #left {
+        width: 10vh;
+        height: 10vh;
+    }
+
+    .buttons button {
+        width: 80px;
+        font-size: 8px;
+    }
+
+    #content #left {
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+/* -------------- when screen comes to 930px this css will apply ---------------- */
+@media (max-width:930px) {
+
+    menu {
+        width: 100%;
+        left: 0%;
+        border-left: 0px;
+    }
+
+    #side-bar {
+        display: none;
+        scale: 0;
+        opacity: 0;
+    }
+
+    #side-bar-menu {
+        display: block;
+    }
+
+    .shop-tabs {
+        background-color: #0E1319;
+        width: 100%;
+        height: calc(98vh - 100px);
+        left: 0;
+    }
+
+    #top-screen {
+        margin-top: 2%;
+        margin-left: 0%;
+    }
+
+    .single-tab {
+        justify-content: center;
+    }
+
+    .preview-card {
+        top: -15%;
+        right: 0%;
+        width: 100%;
+        height: 90vh;
+    }
+
+    .preview-img-side {
+        height: 60%;
+    }
+
+}
+
+/* -------------- when screen comes to 800px this css will apply ---------------- */
+@media (max-width:800px) {
+
+    .card-container {
+        width: 60vh;
+        height: 33vh;
+    }
+
+    .single-tab {
+        justify-content: center;
+    }
+
+}
+
+/* -------------- when screen comes to 600px this css will apply ---------------- */
+@media (max-width:600px) {
+    
+    .center-accueil {
+        height: 24vh;
+    }
+    
+}
+
+/* -------------- when screen comes to 500px this css will apply ---------------- */
+@media (max-width:500px) {
+
+    .preview-content-side{
+        padding: 2vh;
+    }
+
+    .preview-card {
+        height: 120%;
+    }
+
+    .preview-img-side {
+        height: 40%;
+    }
+
+    .history-content{
+        display: flex;
+        gap: 20px;
+    }
+    
+    .history-detail{
+        gap: 10px;
+        padding: 3px;
+        justify-content: none;
+    }
+
+    .transaction,.diamants,.date{
+        font-size: 12px;
+    }
+    .history-container li{
+        height: 36px;
+    }
+
+}
+
+/* -------------- when screen comes to 440px this css will apply ---------------- */
+@media (max-width:440px) {
+
+    .card-container{
+        width: 44vh;
+    }
+}
+
+@media (max-width:410px) {
+
+    .preview-description{
+        font-size: 14px;
+    }
+}
+
+    
+
+/* -------------- when screen comes to 370px this css will apply ---------------- */
+@media (max-width:370px) {
+
+    .rotate-heading {
+        font-size: 6vw;
+    }
+
+}
+
+/* -------------- when screen comes to 320px this css will apply ---------------- */
+@media (max-width:320px) {
+
+    .card-container{
+        width: 44vh;
+    }
+
+}
