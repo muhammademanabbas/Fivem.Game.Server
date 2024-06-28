@@ -11,10 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 
     <!-- Our Css files -->
+    <link rel="stylesheet" href="style/font.css">
+    <link rel="stylesheet" href="./style/preview.css">
+    <link rel="stylesheet" href="./style/history.css">
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/responsiveStyle.css">
-    <link rel="stylesheet" href="style/font.css">
-
+    
     <!-- Remix icon cdn-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 
@@ -23,7 +25,7 @@
 
 <body>
     <main>
-        <div id="backgound-screen" >
+        <div id="backgound-screen">
             <div id="top-screen">
                 <div id="side-bar">
                     <div id="sidebar-container">
@@ -33,11 +35,11 @@
                                 <img src="./assets/sidebar-icons/logo.png" id="sensity-img" alt="logo" />
                             </div>
                             <div id="icons">
-                                <li class="active-tab-btn">
+                                <li class="">
                                     <img src="./assets/sidebar-icons/accueil.png" alt="accueil-img">
                                     <p>Accueil</p>
                                 </li>
-                                <li class="">
+                                <li class="active-tab-btn">
                                     <img src="./assets/sidebar-icons/véhicule.png" alt="véhicle-img">
                                     <p>Véhicle</p>
                                 </li>
@@ -70,7 +72,8 @@
                         </div>
                     </div>
                 </div>
-                <menu>
+
+                <menu id="menu">
                     <i class="ri-menu-2-fill" id="side-bar-menu"></i>
                     <div id="content">
                         <div id="left"></div>
@@ -83,14 +86,15 @@
                     </div>
                     <div class="buttons">
                         <button>Boutique</button>
-                        <button>Historique</button>
+                        <button id="history-btn">Historique</button>
                         <button>Iventaire (0)</button>
                     </div>
                 </menu>
 
                 <!--All Tabs by Different Category -->
-                 <!-- accueil tab it is different style than others-->
-                <section class="shop-tabs active-tab">
+
+                <!-- accueil Tab it is different style than others-->
+                <section class="shop-tabs">
                     <div class="tabs-container">
                         <div class="accueil-tab">
                             <!-- accueil tab will show here from java script -->
@@ -98,22 +102,22 @@
                     </div>
                 </section>
                 <!-- vehicle Tab -->
-                <section class="shop-tabs ">
+                <section class="shop-tabs active-tab">
                     <div class="tabs-container">
                         <div class="vehicle-tab single-tab">
-                            <!-- cards will display there -->
+                           
                         </div>
                     </div>
                 </section>
-                <!-- armes tab -->
+                <!-- armes Tab -->
                 <section class="shop-tabs">
                     <div class="tabs-container">
                         <div class="armes-tab single-tab">
-                            
+
                         </div>
                     </div>
                 </section>
-                <!-- caisses tab -->
+                <!-- caisses Tab -->
                 <section class="shop-tabs">
                     <div class="tabs-container">
                         <div class="caisses-tab single-tab">
@@ -121,7 +125,7 @@
                         </div>
                     </div>
                 </section>
-                <!-- packs tab -->
+                <!-- packs Tab -->
                 <section class="shop-tabs">
                     <div class="tabs-container">
                         <div class="packs-tab single-tab">
@@ -129,15 +133,15 @@
                         </div>
                     </div>
                 </section>
-                <!-- consommables taba -->
+                <!-- consommables Tab -->
                 <section class="shop-tabs">
                     <div class="tabs-container">
                         <div class="consommables-tab single-tab">
-                            
+
                         </div>
                     </div>
                 </section>
-                <!-- abonnement tabs -->
+                <!-- abonnement Tab -->
                 <section class="shop-tabs">
                     <div class="tabs-container">
                         <div class="abonnement-tab single-tab">
@@ -145,7 +149,23 @@
                         </div>
                     </div>
                 </section>
-
+                <!-- History Tab -->
+                <section class="shop-tabs" id="history-tab">
+                    <div class="tabs-container">
+                        <div class="history-tab single-tab">
+                            <div class="history-container">
+                                <li class="history-detail">
+                                    <div class="transaction">Transaction</div>
+                                    <div class="history-content">
+                                        <div class="diamants">Diamants</div>
+                                        <div class="date">Date</div>
+                                    </div>
+                                </li>   
+                                 
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
@@ -157,4 +177,5 @@
     <script src="./js/caissesFunction.js"></script>
     <script src="./js/consommableFunction.js"></script>
 </body>
+
 </html>
